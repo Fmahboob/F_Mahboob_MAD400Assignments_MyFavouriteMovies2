@@ -5,4 +5,4 @@
 <div class="type"><h3>Genre</h3>{{ movie ? movie.type: ''}}</div>
 <div class="tags"><h3>Cast</h3>{{ movie ? movie.tags: ''}}</div>
 
-<div *ngIf="movie ? movie.imgURL" class="image" ><img [src]="movie ? movie.imgURL: ''"(click)="clickImage()" [src]="movie?.imgURL" ></div>
+<img *ngIf="movie?.imgURL" class="image" (click)="clickImage()" [src]="movie?.imgURL">
