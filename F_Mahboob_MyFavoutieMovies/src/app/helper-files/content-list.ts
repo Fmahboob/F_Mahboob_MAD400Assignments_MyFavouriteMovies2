@@ -1,4 +1,4 @@
-import { Console } from "console";
+
 import { Content } from "./content-interface";
 
 export class ContentList{
