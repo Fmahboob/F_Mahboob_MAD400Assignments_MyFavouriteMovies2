@@ -1,5 +1,4 @@
-import { prepareSyntheticListenerFunctionName } from '@angular/compiler/src/render3/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 
@@ -9,7 +8,8 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  
+  @Input()
+  content!: Content;
  
 
   constructor() {
