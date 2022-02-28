@@ -26,7 +26,7 @@ export class ContentList{
     }
 
     movieInformation(myMovie: Content): string{
-     this.detail = "<h4>" + myMovie.title + "</h4> is my Favourite movie. Poster of movie is " + myMovie.imgURL + " The director of this movie is " + myMovie.creator + ". This description of this movie is " + myMovie.description + ". This is recomended for " + myMovie.tags
+     this.detail = "<h4>" + myMovie.title + "</h4>This is one of my Favourite movie. Poster of movie is " + myMovie.imgURL + " The director of this movie is " + myMovie.creator + ". This movie is about " + myMovie.description + ". Famous actors are " + myMovie.tags
      return this.detail;
 
     }
