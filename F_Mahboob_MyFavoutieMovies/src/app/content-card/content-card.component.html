@@ -1,7 +1,7 @@
 <div class="title"><h1>{{ movie?.title }}</h1></div>
 <img *ngIf="movie?.imgURL" class="image" (click)="clickImage()" [src]="movie?.imgURL">
-<div class="creator"><h3>Director</h3>{{  movie?.creator}}></div>
+<div class="creator"><h3>Director</h3>{{ movie?.creator }}</div>
 <div class="description"><h3>Description</h3>{{ movie?.description}}</div>
-<div class="type"><h3>Genre</h3>{{ movie?.type }}</div>
-<div class="tags"><h3>Cast</h3>{{ movie?.tags}}</div>
+<div *ngIf="movie?.type"class="type"><h3>Genre</h3>{{ movie?.type }}</div>
+<div *ngIf="movie?.tags" class="tags"><h3>Cast</h3>{{ movie?.tags}}</div>
 
