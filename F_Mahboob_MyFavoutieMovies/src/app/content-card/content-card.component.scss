@@ -27,9 +27,20 @@
     
 }
 
-
+.tag{
+    border: 1px solid red;
+    padding: 8px;
+    display: inline-block;
+    margin: 8px;
+}
 :host.is-first{
     border: 2px solid black;
+   
+
+}
+:host.is-last{
+    border: 2px dashed rgb(49, 201, 117);
+    color: rgb(60, 5, 148);
    
 
 }

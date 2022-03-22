@@ -1,4 +1,3 @@
 
-<app-content-card *ngFor="let movie of allMovies; index as i; first as isFirst"
-[movie]="movie" [class.is-first]="isFirst">
-</app-content-card>
+<app-content-card *ngFor="let movie of allMovies; index as i; first as isFirst; last as isLast"
+[movie]="movie" [class.is-first]="isFirst" [class.is-last]="isLast"></app-content-card>
