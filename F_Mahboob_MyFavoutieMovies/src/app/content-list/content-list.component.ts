@@ -10,6 +10,7 @@ import { Content } from '../helper-files/content-interface';
 export class ContentListComponent implements OnInit {
 
   allMovies: Content[];
+  titleFound?: boolean;
 
   constructor() { 
     this.allMovies = [{
@@ -60,9 +61,17 @@ export class ContentListComponent implements OnInit {
       description: 'Thomas  a teenager, arrives in a glade at the center of a giant labyrinth. Like the other youths dumped there before him, he has no memory of his previous life. Thomas quickly becomes part of the group and soon after demonstrates a unique perspective that scores him a promotion to Runner status -- those who patrol the always-changing maze to find an escape route. Together with Teresa (Kaya Scodelario), the only female, Thomas tries to convince his cohorts that he knows a way out.',
       creator: 'Wes Ball',
       imgURL: 'https://lumiere-a.akamaihd.net/v1/images/image_c09a58e5.jpeg',
-      //type: 'Action'
+      type: 'Action'
      
+    },{
+      id: 6,
+      title: 'The Maze Runner',
+      description: 'The Hunger Games film series is composed of science fiction dystopian adventure films, based on The Hunger Games trilogy of novels by the American author Suzanne Collins.',
+      creator: ' Gary Ross',
+      imgURL: 'https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/01/The-Hunger-Games-Movies-in-Order.jpg'
+      
     }
+
     ];
 
   }
@@ -70,4 +79,19 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkForTitle(title: string): void{
+    var titleMovie = (this.allMovies.filter(t=> t.title === title)).length
+      
+      
+      
+      
+      
+    if (this.allMovies.some(t => t.title === title) || titleMovie <= title.length){
+      this.titleFound = true;
+    }
+    else{
+      this.titleFound = false
+    }
+   
+}
 }

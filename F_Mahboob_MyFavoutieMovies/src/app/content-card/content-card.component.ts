@@ -8,8 +8,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  @Input()
-  movie?: Content;
+  @Input() movie?: Content;
  
 
   constructor() {

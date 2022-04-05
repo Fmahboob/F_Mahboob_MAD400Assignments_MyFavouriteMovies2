@@ -1,3 +1,21 @@
 
+ <div>
+    <input #titleSearch>
+  <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+  <div>
+    <span class="success" *ngIf="titleFound"> {{ titleSearch.value}} Found!</span>
+    <span class="failure" *ngIf="titleFound === false"> {{ titleSearch.value}} Not Found!</span>
+  </div>
+
 <app-content-card *ngFor="let movie of allMovies; index as i; first as isFirst; last as isLast"
 [movie]="movie" [class.is-first]="isFirst" [class.is-last]="isLast"></app-content-card>
+
+
+
+<app-content-card *ngFor="let movie of (allMovies | moviestypes);"
+[movie]="movie" class="noType" ></app-content-card>
+
+<app-content-card *ngFor="let movie of (allMovies | moviestypes: 'Horror')"
+[movie]="movie" class="horror" ></app-content-card>
+<app-content-card *ngFor="let movie of (allMovies | moviestypes: 'Action'); "
+[movie]="movie" class="action" ></app-content-card>
