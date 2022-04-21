@@ -1,1 +1,12 @@
+<h1>Individual Item</h1>
+<div>
+    <label>Display single item at id: <input #id> </label> 
+    <button (click)="displayItem(id.value)">Display Item</button>
+
+</div>
+<app-content-card [movie]="individualMovie" class="individualMovie"></app-content-card>
+<br>
+<br>
+
 <app-content-list></app-content-list>
+<app-message></app-message>

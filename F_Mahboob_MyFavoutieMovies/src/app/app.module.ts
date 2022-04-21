@@ -6,6 +6,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { MoviestypesPipe } from './moviestypes.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
+import { MessageComponent } from './messages/message/message.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { HoverAffectDirective } from './hover-affect.directive';
     ContentCardComponent,
     ContentListComponent,
     MoviestypesPipe,
-    HoverAffectDirective
+    HoverAffectDirective,
+    MessageComponent, 
+    
     
   ],
   imports: [

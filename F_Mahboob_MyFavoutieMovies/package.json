@@ -9,7 +9,9 @@
     "test": "ng test",
     "generatecomponent": "ng generate component",
     "generatepipe": "ng generate pipe",
-    "generatedirective": "ng generate directive"
+    "generatedirective": "ng generate directive",
+    "generateservice": "ng generate service"
+    
 
 
   },

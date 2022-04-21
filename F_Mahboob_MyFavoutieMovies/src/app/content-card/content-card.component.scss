@@ -8,6 +8,9 @@
     border: 1px dashed rgb(19, 162, 60);
     }
 .image{
+    &.individualMovie{
+        box-shadow: 5px, rgb(210, 33, 201);
+    }
     display: block;
     border: 5px solid antiquewhite;
     width: 55%;
@@ -46,8 +49,8 @@
     border: 2px dashed rgb(49, 201, 117);
     color: rgb(60, 5, 148);
    
-
 }
+
 
 
 
