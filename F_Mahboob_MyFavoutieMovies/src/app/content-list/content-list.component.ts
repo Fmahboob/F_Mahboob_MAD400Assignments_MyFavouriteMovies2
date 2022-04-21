@@ -86,9 +86,14 @@ export class ContentListComponent implements OnInit {
       this.titleFound = true;
     }
     else{
-      this.titleFound = false
+      this.titleFound = false;
     }
-    
-   
+}
+addMovieToList(newMovie: Content): void{
+  console.log("Contetn created from child elememt: ", newMovie);
+  this.allMovies.push(newMovie);
+  this.allMovies = [...this.allMovies];
+  console.log("my list after cloning: ", this.allMovies);
+
 }
 }
