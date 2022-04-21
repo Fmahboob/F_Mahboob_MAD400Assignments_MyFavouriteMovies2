@@ -1,6 +1,6 @@
 {
   "name": "f-mahboob-my-favoutie-movies",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

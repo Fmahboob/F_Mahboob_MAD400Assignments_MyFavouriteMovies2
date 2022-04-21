@@ -80,18 +80,15 @@ export class ContentListComponent implements OnInit {
   }
 
   checkForTitle(title: string): void{
-    var titleMovie = (this.allMovies.filter(t=> t.title === title)).length
+    
       
-      
-      
-      
-      
-    if (this.allMovies.some(t => t.title === title) || titleMovie <= title.length){
+    if (this.allMovies.some(t => t.title === title)){
       this.titleFound = true;
     }
     else{
       this.titleFound = false
     }
+    
    
 }
 }

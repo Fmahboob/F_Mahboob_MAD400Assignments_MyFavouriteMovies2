@@ -1,9 +1,12 @@
 <div class="title"><h1>{{ movie?.title }}</h1></div>
 <img *ngIf="movie?.imgURL" class="image" (click)="clickImage()" [src]="movie?.imgURL">
+<img *ngIf="!movie?.imgURL" class="image" (click)="clickImage()"
+src = "https://cdn.pixabay.com/photo/2019/06/15/19/58/movies-4276397_960_720.png">
 <div class="creator"><h3>Director</h3>{{ movie?.creator }}</div>
 <div class="description"><h3>Description</h3>{{ movie?.description}}</div>
-<div *ngIf="movie?.type"class="type"><h3>Genre</h3>{{ movie?.type }}</div>
-<div *ngIf="movie?.tags"><h3>Cast</h3><span *ngFor="let tag of movie?.tags" class="tag">{{ tag }}</span></div>
+
+<div appHoverAffect affect="fontWeight" *ngIf="movie?.tags"><h3>Cast</h3><span *ngFor="let tag of movie?.tags" class="tag">{{ tag }}</span></div>
+<div  appHoverAffect affect="textDecoration" *ngIf="movie?.type" class="type">{{ movie?.type }}
 
 
 <div class="horror" *ngFor="let movie of" {{ allMovies | type = "Horror" }} ></div>
