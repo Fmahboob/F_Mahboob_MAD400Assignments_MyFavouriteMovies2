@@ -1,4 +1,4 @@
-
+<app-modify-content-component (newMovietEvent)="addMovieToList($event)" (updateMovieEvent)="updateMovieToList()" ></app-modify-content-component>
  <div>
     <input #titleSearch>
   <button (click)="checkForTitle(titleSearch.value)">Title Check</button>

@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { MessageService } from '../services/message.service';
 import { MovieserviceService } from '../services/movieservice.service';
 
 @Component({
@@ -10,16 +11,19 @@ import { MovieserviceService } from '../services/movieservice.service';
 })
 export class ContentListComponent implements OnInit {
 
-  allMovies: Content[] = []; 
+  allMovies: Content[]; 
   titleFound?: boolean;
  
 
-  constructor(private movieService: MovieserviceService)  { 
-
+  constructor(private movieService: MovieserviceService, private messageService: MessageService)  { 
+    this.allMovies = [];
   }
 
   ngOnInit(): void {
-    this.movieService.getMovie().subscribe(movie => this.allMovies = movie)
+    this.movieService.getMovie().subscribe(listOfMovie =>{
+      this.allMovies = listOfMovie;
+      this.messageService.add("List loaded sucessfully")
+    } );
   }
 
   checkForTitle(title: string): void{
@@ -32,8 +36,24 @@ export class ContentListComponent implements OnInit {
       this.titleFound = false
     }
     
-   
 }
 
+  addMovieToList(newMovie: Content): void{
+        this.messageService.add("New content added and displayed on list and Id number is " + newMovie.id);
+
+  this.movieService.getMovie().subscribe(listOfMovies => {
+    this.allMovies = listOfMovies;
+    this.messageService.add("New content added and displayed on list")
+  });
+    
+  }
+
+  updateMovieToList(): void{
+    this.movieService.getMovie().subscribe(listOfMovies => {
+      this.allMovies = listOfMovies;
+      this.messageService.add("Content on the list Updated")
+    })
+
+  }
 
 }

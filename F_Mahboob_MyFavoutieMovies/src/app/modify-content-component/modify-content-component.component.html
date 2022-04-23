@@ -1,0 +1,26 @@
+<div>
+    <label>Id: <input [(ngModel)]="tempId" type="number"></label>
+</div>
+<div>
+    <label>Title <input [(ngModel)]="newMovie.title"></label>
+</div>
+<div>
+    <label>Description <input [(ngModel)]="newMovie.description"></label>
+</div>
+<div>
+    <label>Creator <input [(ngModel)]="newMovie.creator"></label>
+</div>
+<div>
+    <label>Image Url <input [(ngModel)]="newMovie.imgURL"></label>
+</div>
+
+<div>
+    <label>Type <input [(ngModel)]="newMovie.type"></label>
+</div>
+
+<div>
+    <label>Tags <input [(ngModel)]="tempTags"></label>
+</div>
+<div>
+    <button (click)="modifyOrAddItemToParent()">{{(tempId !== "") ? "Update Movie": "Add Movie"}}</button>
+</div>
